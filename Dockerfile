@@ -1,4 +1,6 @@
 FROM openjdk:8-jdk-alpine
+USER root
+RUN apk add docker
 VOLUME /tmp
 EXPOSE 8000
 ADD target/*.jar app.jar
